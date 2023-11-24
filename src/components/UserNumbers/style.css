@@ -1,0 +1,31 @@
+.usernum-section{
+    padding: 40px 0;
+}
+
+.usernum-image{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.usernum__number{
+    font-size: 150px;
+    line-height: 150px;
+    font-weight: 600;
+    color: white;
+}
+.usernum__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.usernum__title{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+

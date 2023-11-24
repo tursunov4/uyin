@@ -1,0 +1,41 @@
+.haeder__section{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+backdrop-filter: blur(7.5px);
+margin-bottom: 20px;
+}
+.site-logo {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    width: 150px;
+    height: 60px;
+    font-size: 25px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navlinks__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.navlink__me{
+    background-color: #fff;
+    height: 40px;
+}
