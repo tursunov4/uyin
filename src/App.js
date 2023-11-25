@@ -1,14 +1,15 @@
 import  "./assets/main.css"
-import Header from "./components/Header/Header";
-import MyForm from "./components/Form/Form";
-import UserNumbers from "./components/UserNumbers/UserNumbers";
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./components/NotFound/NotFound";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <div className="App">
-       <Header/>
-        <UserNumbers/>
-        <MyForm/>
+      <Routes>
+        <Route element={<Homepage/>} path="/"/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
     </div>
   );
 }

@@ -45,7 +45,26 @@
     background-color: #e4e3e3 ;
  
 }
-
+.your-toast {
+    /* Sizning dizayningiz */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .your-toast__err{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+  }
 .form-section__btn:hover{
    opacity: 0.8;
 }
@@ -76,4 +95,14 @@
     .form-section__input{
         width: 80vw;
     }
+ }
+
+ .notfoundbtn{
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #e4e3e3
  }

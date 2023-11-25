@@ -1,7 +1,9 @@
-import React from 'react'
+
 import "./style.css"
 import Number from './Number'
+
 const UserNumbers = () => {
+
   return (
     <section className='usernum-section'>
       <div className="container">
@@ -12,7 +14,7 @@ const UserNumbers = () => {
                <div className="user__about">
                 <h3 className='usernum__title'>Game participants:</h3>
                <p className="usernum__number  ">
-                <Number n={99}/>
+                <Number />
               </p>
                </div>
         </div>

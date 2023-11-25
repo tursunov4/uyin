@@ -1,6 +1,32 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './form.css'
+import axios from 'axios';
+import { Context } from '../../Context/Context';
+import Tost from '../Tost/Tost';
+import Tosterr from '../Tosterr/Tosterr';
 const MyForm = () => {
+  const {refresh , setRefresh} = useContext(Context)
+  const [showToast, setShowToast] = useState(false);
+  const [showToast2, setShowToast2] = useState(false);
+  const [massage , setMassage] = useState("")
+  const [massage2 , setMassage2] = useState("")
+
+  const handleToastClose = () => {
+    setShowToast(false);
+  };
+
+  const showToastOnClick = () => {
+    setShowToast(true);
+  };
+  const handleToastClose2 = () => {
+    setShowToast2(false);
+  };
+
+  const showToastOnClick2 = () => {
+    setShowToast2(true);
+  };
+
+
     const [formData, setFormData] = useState({
         username: '',
         id: '',
@@ -9,15 +35,13 @@ const MyForm = () => {
     
       const [errors, setErrors] = useState({
         username: '',
-        id: '',
- 
+        id: '', 
       });
     
       const validateForm = () => {
         let isValid = true;
         const newErrors = { ...errors };
     
-        // Validate username
         if (formData.username.trim() === '') {
           newErrors.username = 'Wallet address is required!';
           isValid = false;
@@ -39,10 +63,26 @@ const MyForm = () => {
         e.preventDefault();
     
         if (validateForm()) {
-          // Form is valid, you can submit the data or perform other actions
-          console.log('Form submitted:', formData);
+          axios.post("http://164.92.172.190:8002/api/v1/participant/" , {
+            address_wallet: formData.username,
+            discord_id: formData.id
+          }).then((res)=>{
+            console.log(res.data.message)
+            setMassage(res.data.message)
+            showToastOnClick()
+            setFormData({
+              username: '',
+              id: '',       
+            })
+            window.scrollTo(0, 0);
+            setRefresh(!refresh)
+          }).catch((err)=>{  
+            console.log(err)   
+            setMassage2(err.response.data.message)
+            showToastOnClick2()
+            
+          })
         } else {
-          // Form is not valid, do not submit
           console.log('Form not submitted due to validation errors');
         }
       };
@@ -58,11 +98,13 @@ const MyForm = () => {
 
   return (
      <section className="form-section">
+        {showToast && <Tost message={massage} onClose={handleToastClose} />}
+        {showToast2 && <Tosterr message={massage2} onClose={handleToastClose2} />}
         <div className="container">
         <form className='form-section__form' onSubmit={handleSubmit}>
             <h2 className='form-section__title'>Become a Member</h2>
       <div> 
-        <label className='form-seciton__label' htmlFor="username">Wallet addresses:</label>
+        <label className='form-seciton__label' htmlFor="username">Wallet addresses</label>
         <input
           className='form-section__input'
           type="text"
@@ -70,11 +112,12 @@ const MyForm = () => {
           name="username"
           value={formData.username}
           onChange={handleChange}
+          placeholder='Wallet addresses...'
         />
         <p className='form__error'>{errors.username}</p>
       </div>
       <div>
-        <label className='form-seciton__label'  htmlFor="email">Diskord ID:</label>
+        <label className='form-seciton__label'  htmlFor="email">Discord ID</label>
         <input
          className='form-section__input'
           type="text"
@@ -82,6 +125,7 @@ const MyForm = () => {
           name="id"
           value={formData.id}
           onChange={handleChange}
+          placeholder='Discord id...'
         />
         <p className='form__error'>{errors.id}</p>       
       </div>
@@ -89,7 +133,7 @@ const MyForm = () => {
      
       </div>
       <button className='form-section__btn' type="submit">Submit</button>
-    </form>
+      </form>
         </div>
      </section>
   );
