@@ -19,14 +19,14 @@ const MyForm = () => {
     
         // Validate username
         if (formData.username.trim() === '') {
-          newErrors.username = 'Адреса кошелька is required';
+          newErrors.username = 'Требуется адрес кошелька';
           isValid = false;
         } else {
           newErrors.username = '';
         }
         
         if (formData.id.trim() === '') {
-          newErrors.id = 'Дискорд ID is required';
+          newErrors.id = 'Требуется Дискорд ID ';
           isValid = false;
         } else {
           newErrors.id = '';
