@@ -3,13 +3,13 @@ import './form.css'
 const MyForm = () => {
     const [formData, setFormData] = useState({
         username: '',
-        email: '',
+        id: '',
 
       });
     
       const [errors, setErrors] = useState({
         username: '',
-        email: '',
+        id: '',
  
       });
     
@@ -19,20 +19,20 @@ const MyForm = () => {
     
         // Validate username
         if (formData.username.trim() === '') {
-          newErrors.username = 'Username is required';
+          newErrors.username = 'Адреса кошелька is required';
           isValid = false;
         } else {
           newErrors.username = '';
         }
-    
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-          newErrors.email = 'Invalid email address';
+        
+        if (formData.id.trim() === '') {
+          newErrors.id = 'Дискорд ID is required';
           isValid = false;
         } else {
-          newErrors.email = '';
+          newErrors.id = '';
         }
+    
+       
     
       
     
@@ -65,9 +65,9 @@ const MyForm = () => {
      <section className="form-section">
         <div className="container">
         <form className='form-section__form' onSubmit={handleSubmit}>
-            <h2 className='form-section__title'>Form</h2>
+            <h2 className='form-section__title'>Стань Участником</h2>
       <div> 
-        <label className='form-seciton__label' htmlFor="username">Username:</label>
+        <label className='form-seciton__label' htmlFor="username">Адреса кошелька:</label>
         <input
           className='form-section__input'
           type="text"
@@ -79,21 +79,21 @@ const MyForm = () => {
         <p className='form__error'>{errors.username}</p>
       </div>
       <div>
-        <label className='form-seciton__label'  htmlFor="email">Email:</label>
+        <label className='form-seciton__label'  htmlFor="email">Дискорд ID:</label>
         <input
          className='form-section__input'
           type="text"
-          id="email"
-          name="email"
-          value={formData.email}
+          id="Дискорд ID"
+          name="Дискорд ID"
+          value={formData.id}
           onChange={handleChange}
         />
-        <p className='form__error'>{errors.email}</p>       
+        <p className='form__error'>{errors.id}</p>       
       </div>
       <div>
      
       </div>
-      <button className='form-section__btn' type="submit">Submit</button>
+      <button className='form-section__btn' type="submit">Отправить</button>
     </form>
         </div>
      </section>

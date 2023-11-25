@@ -10,7 +10,7 @@ const UserNumbers = () => {
                 Game-image
             </div>
                <div className="user__about">
-                <h3 className='usernum__title'>Users Number:</h3>
+                <h3 className='usernum__title'>Участники розыгрыша:</h3>
                <p className="usernum__number">
                 <Number n={99}/>
               </p>
