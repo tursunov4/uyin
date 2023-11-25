@@ -1,13 +1,13 @@
 .form-section{
     padding: 30px 0 ;
-    background: #141414;
+
 }
 .form-section__form{
     padding: 30px 0;
     border-radius: 10px;
     margin: 0 auto;
     width: 500px;
-    border: 2px solid rgba(255, 255, 255, 0.20);
+    border: 2px solid rgba(79, 77, 77, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,22 +16,21 @@
 }
 .form-seciton__label {
     display: block;
-    color: white;
+;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 10px;
 }
 .form-section__input{
-    
     border: none;
     outline: none;
     padding: 10px;
     border-radius: 4px;
     width: 400px;
     margin-bottom: 20px;
+    background-color:#e4e3e3  ;
 }
-.form-section__title {
-    color: white;
+.form-section__title {  
     font-size: 30px;
 }
 .form-section__btn{
@@ -43,7 +42,8 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #e4e3e3 ;
+ 
 }
 
 .form-section__btn:hover{

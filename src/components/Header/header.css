@@ -1,8 +1,9 @@
 .haeder__section{
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    
 backdrop-filter: blur(7.5px);
 margin-bottom: 20px;
+background-color: #e4e3e3;
 }
 .site-logo {
      display: flex;
@@ -11,13 +12,13 @@ margin-bottom: 20px;
     width: 150px;
     height: 60px;
     font-size: 25px;
-    color: aliceblue;
+
     cursor: pointer;
 }
 .header-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .navlinks{
     display: flex;

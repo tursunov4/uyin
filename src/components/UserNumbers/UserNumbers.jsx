@@ -6,12 +6,12 @@ const UserNumbers = () => {
     <section className='usernum-section'>
       <div className="container">
         <div className="usernum__wrap">
-            <div className="usernum-image">
+            {/* <div className="usernum-image">
                 Game-image
-            </div>
+             </div> */}
                <div className="user__about">
-                <h3 className='usernum__title'>Участники розыгрыша:</h3>
-               <p className="usernum__number">
+                <h3 className='usernum__title'>Game participants:</h3>
+               <p className="usernum__number  ">
                 <Number n={99}/>
               </p>
                </div>

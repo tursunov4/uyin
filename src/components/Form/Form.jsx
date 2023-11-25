@@ -19,23 +19,18 @@ const MyForm = () => {
     
         // Validate username
         if (formData.username.trim() === '') {
-          newErrors.username = 'Требуется адрес кошелька';
+          newErrors.username = 'Wallet address is required!';
           isValid = false;
         } else {
           newErrors.username = '';
         }
         
         if (formData.id.trim() === '') {
-          newErrors.id = 'Требуется Дискорд ID ';
+          newErrors.id = 'Discord ID is required ! ';
           isValid = false;
         } else {
           newErrors.id = '';
-        }
-    
-       
-    
-      
-    
+        } 
         setErrors(newErrors);
         return isValid;
       };
@@ -65,9 +60,9 @@ const MyForm = () => {
      <section className="form-section">
         <div className="container">
         <form className='form-section__form' onSubmit={handleSubmit}>
-            <h2 className='form-section__title'>Стань Участником</h2>
+            <h2 className='form-section__title'>Become a Member</h2>
       <div> 
-        <label className='form-seciton__label' htmlFor="username">Адреса кошелька:</label>
+        <label className='form-seciton__label' htmlFor="username">Wallet addresses:</label>
         <input
           className='form-section__input'
           type="text"
@@ -79,7 +74,7 @@ const MyForm = () => {
         <p className='form__error'>{errors.username}</p>
       </div>
       <div>
-        <label className='form-seciton__label'  htmlFor="email">Дискорд ID:</label>
+        <label className='form-seciton__label'  htmlFor="email">Diskord ID:</label>
         <input
          className='form-section__input'
           type="text"
@@ -93,7 +88,7 @@ const MyForm = () => {
       <div>
      
       </div>
-      <button className='form-section__btn' type="submit">Отправить</button>
+      <button className='form-section__btn' type="submit">Submit</button>
     </form>
         </div>
      </section>

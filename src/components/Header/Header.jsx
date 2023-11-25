@@ -9,9 +9,6 @@ const Header = () => {
        <section className='haeder__section'>
         <div className="container">
             <div className="header-wrapper">
-                <a className='site-logo' href="">                                       
-                      SiteLogo
-                </a>
                 <nav className='navlinks'>
                   <a className='navlinks__img' href="">
                     <img src={twiter} alt="" />
