@@ -83,8 +83,8 @@ const MyForm = () => {
         <input
          className='form-section__input'
           type="text"
-          id="Дискорд ID"
-          name="Дискорд ID"
+          id="id"
+          name="id"
           value={formData.id}
           onChange={handleChange}
         />
