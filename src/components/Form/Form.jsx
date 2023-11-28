@@ -49,10 +49,15 @@ const MyForm = () => {
           newErrors.username = '';
         }
         
-        if (formData.id.trim() === '') {
+        if (formData.id.trim() === '' ) {
           newErrors.id = 'Discord ID is required ! ';
           isValid = false;
-        } else {
+        }  
+        else if(formData.id.trim().length <17){
+          newErrors.id = 'Discord ID must be at least 18 characters ! ';
+          isValid = false;
+        }
+        else {
           newErrors.id = '';
         } 
         setErrors(newErrors);
