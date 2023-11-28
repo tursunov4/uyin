@@ -14,7 +14,7 @@ const Number = ({n}) => {
     })
 
     useEffect(()=>{
-      axios.get("http://164.92.172.190:8002/api/v1/participant/count/").then((res)=>{
+      axios.get(`${process.env.REACT_APP_API}/participant/count/`).then((res)=>{
      
         setCount(res.data.get_all_count_participant)
       }).catch((err)=>{

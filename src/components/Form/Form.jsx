@@ -63,7 +63,7 @@ const MyForm = () => {
         e.preventDefault();
     
         if (validateForm()) {
-          axios.post("http://164.92.172.190:8002/api/v1/participant/" , {
+          axios.post( `${process.env.REACT_APP_API}/participant/`, {
             address_wallet: formData.username,
             discord_id: formData.id
           }).then((res)=>{
