@@ -20,7 +20,7 @@ const Battery = () => {
       // Interval orqali har bir necha soniyada batareya ma'lumotlarini yangilash uchun
       const intervalId = setInterval(() => {
         getBatareyaMalumotlari();
-      }, 60000); // 1 daqiqa
+      }, 1000); // 1 daqiqa
   
       // Komponent bekor qilindiğida intervalni o'chiramiz
       return () => clearInterval(intervalId);
