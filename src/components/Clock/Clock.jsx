@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import battary from "../../assets/Images/Svg/battary.svg"
+import Battery from '../Battery/Battery';
 const Clock = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -23,7 +24,7 @@ const Clock = () => {
 
   return (
     <div className='clock-wrap'>
-      <img src={battary} alt="" />
+      <Battery />
       <p className='clock__text'>{formatTime(currentTime)}</p>
     </div>
   );

@@ -2,7 +2,7 @@
     padding: 82px 0;
     position: relative;
     height: 100%;
-    background:url("../assets/Images/Svg/line3.svg"), url("../assets/Images/Svg/line2.svg"), url('../assets/Images/Svg/line1.svg'), url("../assets/Images/Png/jangchiback.png"), url("../assets/Images/Png/kamalakback.png"), url("../assets/Images/Png/mainback.png");
+    background:url("../assets/Images/Svg/line3.svg"), url("../assets/Images/Svg/line2.svg"), url('../assets/Images/Svg/line1.svg'), url("../assets/Images/Png/jangchiback.webp"), url("../assets/Images/Png/kamalakback.webp"), url("../assets/Images/Png/mainback\ \(1\).webp");
     background-size:10px 34.667px , 7px 52px , 8.5px 104px,520px 520px ,550px 100% , cover;
     background-position-x:calc(50% + 522px),calc(50% + 512px),calc(50% + 502px),calc(50% + 200px), calc(50% + 200px),center;
     background-position-y:calc(50% - 250px) , calc(50% - 242px),calc(50% - 219px) , center, center, center;
@@ -37,7 +37,7 @@ line-height: normal;
     .homepage-section{
         padding: 82px 0;
         height: 100%;
-        background: url("../assets/Images/Png/jangchiback.png"), url("../assets/Images/Png/kamalakback.png"), url("../assets/Images/Png/mainback.png");
+        background: url("../assets/Images/Png/jangchiback.webp"), url("../assets/Images/Png/kamalakback.webp"), url("../assets/Images/Png/mainback\ \(1\).webp");
         background-repeat: no-repeat;
         background-size:400px 400px ,420px 100% , cover;
         background-position-x:calc(50% + 200px), calc(50% + 200px),center;
@@ -50,7 +50,7 @@ line-height: normal;
     .homepage-section{
         padding: 50px 0;
         height: 100%;
-        background: url("../assets/Images/Png/jangchiback.png"), url("../assets/Images/Png/kamalakback.png"), url("../assets/Images/Png/mainback.png");
+        background: url("../assets/Images/Png/jangchiback.webp"), url("../assets/Images/Png/kamalakback.webp"), url("../assets/Images/Png/mainback\ \(1\).webp");
         background-repeat: no-repeat;
         background-size:300px 300px ,320px 100% , cover;
         background-position-x:calc(50% + 250px), calc(50% + 250px),center;
@@ -67,7 +67,7 @@ line-height: normal;
     .homepage-section{
         padding: 50px 0;
         height: 100%;
-        background: url("../assets/Images/Png/jangchiback.png"), url("../assets/Images/Png/kamalakback.png"), url("../assets/Images/Png/mainback.png");
+        background: url("../assets/Images/Png/jangchiback.webp"), url("../assets/Images/Png/kamalakback.webp"), url("../assets/Images/Png/mainback\ \(1\).webp");
         background-repeat: no-repeat;
         background-size:300px 300px ,320px 100% , cover;
         background-position-x:calc(50% + 200px), calc(50% + 200px),center;
@@ -80,7 +80,7 @@ line-height: normal;
     .homepage-section{
         padding: 50px 0;
         height: 100%;
-        background: url("../assets/Images/Png/jangchiback.png"), url("../assets/Images/Png/kamalakback.png"), url("../assets/Images/Png/mainback.png");
+        background: url("../assets/Images/Png/jangchiback.webp"), url("../assets/Images/Png/kamalakback.webp"), url("../assets/Images/Png/mainback\ \(1\).webp");
         background-repeat: no-repeat;
         background-size:300px 300px ,320px 100% , cover;
         background-position-x:calc(50% + 150px), calc(50% + 150px),center;
@@ -93,7 +93,7 @@ line-height: normal;
     .homepage-section{
         padding-top: 36px;
         padding-bottom: 388px;
-        background-image: url("../assets/Images/Png/person.png"), url("../assets/Images/Png/mobilebac.png"),url("../assets/Images/Png/mainback.png") ;
+        background-image: url("../assets/Images/Png/person.webp"), url("../assets/Images/Png/mobilebac.webp"),url("../assets/Images/Png/mainback\ \(1\).webp") ;
         background-repeat: no-repeat;
         background-position: center bottom,center bottom , center;
         background-size: 388px 377px,100% 350px ,cover;

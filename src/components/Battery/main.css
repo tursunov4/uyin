@@ -1,0 +1,14 @@
+.battary__wrap{
+    margin-bottom: 5px;
+    position: relative;
+  
+  }
+  .battary__bottom{
+    display: block;
+    width: 4px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+     top: 1px;
+    right: -4px;
+  }
