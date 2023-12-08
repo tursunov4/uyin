@@ -9,9 +9,9 @@ const Battery = () => {
         setBatteryPercentage((level * 100).toFixed(2));
       };
   
-      navigator.getBattery().then((battery) => {
+      navigator?.getBattery()?.then((battery) => {
         // Initial battery percentage
-        setBatteryPercentage((battery.level * 100).toFixed(2));
+        setBatteryPercentage((battery.level * 100)?.toFixed(2));
   
         // Subscribe to battery status changes
         battery.addEventListener('levelchange', batteryStatusHandler);
@@ -19,8 +19,8 @@ const Battery = () => {
   
       return () => {
         // Cleanup: remove event listener when component unmounts
-        navigator.getBattery().then((battery) => {
-          battery.removeEventListener('levelchange', batteryStatusHandler);
+        navigator?.getBattery()?.then((battery) => {
+          battery?.removeEventListener('levelchange', batteryStatusHandler);
         });
       };
     }, []); // Empty dependency array ensures that the effect runs only once on component mount
