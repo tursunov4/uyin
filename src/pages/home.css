@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: end;
+    align-items: flex-end;
 }
 .clock__text{
 color: #FFF;

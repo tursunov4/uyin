@@ -44,7 +44,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-    height: 90px;
+    height: 40px;
 }
 .inputrotate2{
     display: block;
@@ -70,7 +70,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-    height: 90px;
+    height: 40px;
 }
 .inputrotate2 input::placeholder{
     color: rgba(255, 255, 255, 0.15);
