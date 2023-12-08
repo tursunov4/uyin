@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./main.css"
 const Battery = () => {
-    const [batteryPercentage, setBatteryPercentage] = useState(null);
+    const [batteryPercentage, setBatteryPercentage] = useState(50);
 
     useEffect(() => {
       const batteryStatusHandler = (event) => {
@@ -26,7 +26,7 @@ const Battery = () => {
     }, []); 
 
     const batteryStyle = {
-        border: '2px solid white',  // Set the border color to white
+        border: '2px solid white',  
         height: '10px',
         width: '20px',
         position: 'relative',
@@ -43,7 +43,6 @@ const Battery = () => {
   return (
     <div className='battary__wrap' style={batteryStyle}>
     <div className='battary__bottom'>
-
     </div>
    <div style={indicatorStyle}></div>
  </div>
