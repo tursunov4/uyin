@@ -3,27 +3,6 @@ import "./main.css"
 const Battery = () => {
     const [batteryPercentage, setBatteryPercentage] = useState(50);
 
-    useEffect(() => {
-      const batteryStatusHandler = (event) => {
-        const { level } = event?.target;
-        setBatteryPercentage((level * 100).toFixed(2));
-      };
-  
-      navigator?.getBattery()?.then((battery) => {
-        // Initial battery percentage
-        setBatteryPercentage((battery.level * 100)?.toFixed(2));
-  
-        // Subscribe to battery status changes
-        battery.addEventListener('levelchange', batteryStatusHandler);
-      });
-  
-      return () => {
-        // Cleanup: remove event listener when component unmounts
-        navigator?.getBattery()?.then((battery) => {
-          battery?.removeEventListener('levelchange', batteryStatusHandler);
-        });
-      };
-    }, []); 
 
     const batteryStyle = {
         border: '2px solid white',  
