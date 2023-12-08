@@ -205,7 +205,7 @@ const MyForm = () => {
 
         <p className='form__error'>{errors.email}</p>       
       </div>
-       <FormButton  buttondivclass={"buttundiv2"} img={submit} imgtrue={true} text={"SUBMIT"} onClick={handleSubmit} />
+       <FormButton  buttondivclass={"buttundiv1"} img={submit} imgtrue={true} text={"SUBMIT"} onClick={handleSubmit} />
  
       </form>
       <div className="iconsdesc">
