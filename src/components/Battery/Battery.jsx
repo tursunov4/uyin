@@ -3,7 +3,7 @@ import "./main.css"
 const Battery = () => {
     const [batteryPercentage, setBatteryPercentage] = useState(50);
 const [newsd ,setNewsfsd] = useState(false)
-    const [batareyaFoizi, setBatareyaFoizi] = useState(null);
+    const [batareyaFoizi, setBatareyaFoizi] = useState(50);
 
     useEffect(() => {
       const getBatareyaMalumotlari = async () => {
