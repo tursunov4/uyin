@@ -54,7 +54,11 @@ const MyForm = () => {
         if (formData.username.trim() === '') {
           newErrors.username = 'Wallet address is required!';
           isValid = false;
-        } else {
+        } else if(formData.username.trim().length <32){
+          newErrors.username = 'Wallet address must be at least 32 characters ! ';
+          isValid = false;
+        }
+         else {
           newErrors.username = '';
         }
         if (formData.email.trim() === '') {
@@ -72,10 +76,7 @@ const MyForm = () => {
           newErrors.id = 'Discord ID is required ! ';
           isValid = false;
         }  
-        else if(formData.id.trim().length <32){
-          newErrors.id = 'Discord ID must be at least 18 characters ! ';
-          isValid = false;
-        }
+       
         else {
           newErrors.id = '';
         } 
