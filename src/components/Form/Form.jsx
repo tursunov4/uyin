@@ -37,12 +37,14 @@ const MyForm = () => {
 
     const [formData, setFormData] = useState({
         username: '',
-        id: ''
+        id: '', 
+        email:""
       });
     
       const [errors, setErrors] = useState({
         username: '',
         id: '', 
+        email:""
       });
     
       const validateForm = () => {
@@ -54,6 +56,16 @@ const MyForm = () => {
           isValid = false;
         } else {
           newErrors.username = '';
+        }
+        if (formData.email.trim() === '') {
+          newErrors.email = 'Email is required!';
+          isValid = false;
+        }else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+          newErrors.email = 'Invalid email format';
+          isValid = false;
+        } 
+         else {
+          newErrors.email = '';
         }
         
         if (formData.id.trim() === '' ) {
@@ -92,7 +104,8 @@ const MyForm = () => {
       const handleConfirm = ()=>{
         axios.post(process.env.REACT_APP_API +"/participant/" ,{
           address_wallet: formData.username,
-          discord_id: formData.id     
+          discord_id: formData.id   ,
+          email:formData.email  
         }).then((res)=>{
           if(res.status === 201){
             setModal(false)
@@ -101,7 +114,8 @@ const MyForm = () => {
             showToastOnClick()
             setFormData({
               username: '',
-              id: '',       
+              id: '',     
+              email:""  
             })
             window.scrollTo(0, 0);
 
@@ -149,6 +163,7 @@ const MyForm = () => {
              <div> 
       
         <Input
+           type={"text"}
            id="username"
            name="username"
            value={formData.username}
@@ -163,6 +178,7 @@ const MyForm = () => {
       <div>
        
           <Input
+          type={"text"}
           id="id"
           name="id"
           value={formData.id}
@@ -173,6 +189,21 @@ const MyForm = () => {
         />
 
         <p className='form__error'>{errors.id}</p>       
+      </div>
+      <div>
+  
+          <Input
+          type={"email"}
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder='Enter your Email'
+            inputclass={"inputrotate2"}
+            label={"Email*"}
+        />
+
+        <p className='form__error'>{errors.email}</p>       
       </div>
        <FormButton  buttondivclass={"buttundiv2"} img={submit} imgtrue={true} text={"SUBMIT"} onClick={handleSubmit} />
  
