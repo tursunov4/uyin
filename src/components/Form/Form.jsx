@@ -124,7 +124,7 @@ const MyForm = () => {
         }).catch((err)=>{
           console.log(err)
           setModal(false)
-          setMassage2(err.response.data.message)
+          setMassage2(err.response.data.errors.email)
           showToastOnClick2()
         })
       }

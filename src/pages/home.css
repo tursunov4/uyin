@@ -14,7 +14,7 @@ body{
     backdrop-filter: blur(2px);
 }
 .clock-wrap{
-    max-width: 62px;
+    max-width: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
