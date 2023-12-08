@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./main.css"
 const Battery = () => {
     const [batteryPercentage, setBatteryPercentage] = useState(50);
-
+const [newsd ,setNewsfsd] = useState(false)
     const [batareyaFoizi, setBatareyaFoizi] = useState(null);
 
     useEffect(() => {

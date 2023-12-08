@@ -6,7 +6,6 @@ import discormmodal from "../../assets/Images/Svg/DicordModal.svg"
 import close from "../../assets/Images/Svg/close.svg"
 const Conirm = ({onSubmit ,onConfirm , modalClose}) => {
   return (
-    
     <div className='confirm__border'>
         <p onClick={modalClose} className='modalclose'>CLOSE <img src={close} alt="" /></p>
         <div className="confirm__border-inner">
@@ -20,8 +19,8 @@ const Conirm = ({onSubmit ,onConfirm , modalClose}) => {
             </p>
           </div>
            <div className='modalbuttons'>
-           <FormButton onClick={onSubmit}  buttondivclass={"buttundiv2"} img={discord} imgtrue={true}  text={"SUBMIT"} />  
-          <FormButton  onClick={onConfirm} buttondivclass={"buttundiv2"}    text={"Join"} />  
+           <FormButton onClick={onSubmit}  buttondivclass={"buttundiv2"} img={discord} imgtrue={true}  text={"JOIN"} />  
+          <FormButton  onClick={onConfirm} buttondivclass={"buttundiv2"}    text={"CONFIRM"} />  
            </div>
         </div>
     </div>
