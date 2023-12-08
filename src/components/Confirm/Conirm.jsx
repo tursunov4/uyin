@@ -21,7 +21,7 @@ const Conirm = ({onSubmit ,onConfirm , modalClose}) => {
           </div>
            <div className='modalbuttons'>
            <FormButton onClick={onSubmit}  buttondivclass={"buttundiv2"} img={discord} imgtrue={true}  text={"SUBMIT"} />  
-          <FormButton  onClick={onConfirm} buttondivclass={"buttundiv2"}    text={"CONFIRM"} />  
+          <FormButton  onClick={onConfirm} buttondivclass={"buttundiv2"}    text={"Join"} />  
            </div>
         </div>
     </div>

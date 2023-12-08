@@ -20,7 +20,6 @@ const MyForm = () => {
   const [massage , setMassage] = useState("")
   const [massage2 , setMassage2] = useState("")
   const [modal , setModal] = useState(false)
-  
   const handleToastClose = () => {
     setShowToast(false);
   };
@@ -40,12 +39,14 @@ const MyForm = () => {
         username: '',
         id: '', 
         email:""
-      });    
+      });
+    
       const [errors, setErrors] = useState({
         username: '',
         id: '', 
         email:""
-      });    
+      });
+    
       const validateForm = () => {
         let isValid = true;
         const newErrors = { ...errors };
@@ -71,6 +72,10 @@ const MyForm = () => {
           newErrors.id = 'Discord ID is required ! ';
           isValid = false;
         }  
+        else if(formData.id.trim().length <32){
+          newErrors.id = 'Discord ID must be at least 18 characters ! ';
+          isValid = false;
+        }
         else {
           newErrors.id = '';
         } 
