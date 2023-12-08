@@ -1,0 +1,80 @@
+
+.newinput__label{   
+    margin-bottom: 8px;
+    margin-top: 24px;
+    color: #FFF;
+font-family: Manrope;
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: normal
+}
+.newinput__wrap{
+    max-width: 451px;
+    padding: 4px 6px;
+    background:  rgba(255, 255, 255, 0.05);
+    height: 60px;
+    padding: 4px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputrotate1{
+    display: block;
+    padding: 15px  12px;
+    width: 98%;
+    height: 95%;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skew(10deg);
+}
+
+.inputrotate1 input{
+    transform: skew(-10deg);
+    border: none;
+    outline: none;
+    width: 98%;
+    background: none;
+    color: rgba(255, 255, 255, 0.15);
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    height: 94%;
+}
+.inputrotate2{
+    display: block;
+    padding: 15px  12px;
+    width: 98%;
+    height: 95%;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skew(-10deg);
+}
+
+.inputrotate2 input{
+    transform: skew(10deg);
+    border: none;
+    outline: none;
+    width: 98%;
+    background: none;
+    color: rgba(255, 255, 255, 0.15);
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    height: 94%;
+}
+.inputrotate2 input::placeholder{
+    color: rgba(255, 255, 255, 0.15);
+}
+.inputrotate1 input::placeholder{
+    color: rgba(255, 255, 255, 0.15);
+}

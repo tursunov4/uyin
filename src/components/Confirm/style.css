@@ -1,0 +1,96 @@
+.confirm__border{
+
+    padding: 17px 48px;
+    display: block;
+    border: 6px solid #fff;
+    max-width: 534px;
+    transform: skew(-2deg);
+    position: relative;
+height: 534px;
+background: linear-gradient(201deg, #060C15 13.97%, #1A1539 98.86%)
+}
+.confirm__border-inner::before{
+     content: " ";
+     position: absolute;
+     display: block;
+    transform: skew(2deg);
+    transform: skewY(2deg);
+    top: 15px;
+    left: 52px;
+    border: 3px solid rgba(255, 255, 255, 0.10);
+    background: linear-gradient(201deg, #060C15 13.97%, #2B264C 98.86%);
+     width: 440px;
+height: 480.995px;
+     z-index: -1;
+}
+.confirm__border-inner{
+    width: 450px;
+
+}
+.confirm__wrapper{
+    width: 340px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+
+}
+.cofirm__title{
+    color: #FFF;
+    margin: 16px 0;
+text-align: center;
+font-family: Blackbison;
+font-size: 56px;
+font-style: normal;
+font-weight: 400;
+line-height: 104.604%; /* 58.579px */
+}
+.confirm__text{
+    color: #FFF;
+
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.modalclose{
+    cursor: pointer;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: #FFF;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+@media only screen and (max-width:685px){
+   .confirm__border{
+    max-width: 350px;
+   
+    padding: 15px 0 15px 25px;
+    border: 3px solid #fff;
+   } 
+   .cofirm__title{
+    font-size: 44px;
+   }
+   .confirm__text{
+    font-size: 16px;
+   }
+   .confirm__border-inner{
+    width: 300px;
+   }
+   .confirm__wrapper{
+    width: 300px;
+   }
+   .confirm__border-inner::before{
+    left: 10px;
+    width: 300px;
+   }
+   .modalbuttons{
+    width: 290px;
+   }
+
+}

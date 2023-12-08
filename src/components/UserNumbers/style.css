@@ -1,32 +1,56 @@
-.usernum-section{
-    padding: 40px 0;
+
+
+.usernumbers__title{
+    margin-bottom: 5px;
+    color: #FFF;
+font-family: Blackbison;
+font-size: 34px;
+font-style: normal;
+font-weight: 400;
+line-height: 104.604%; /* 35.566px */
 }
 
-.usernum-image{
-    width: 400px;
-    height: 400px;
+.username__number{
+    color: rgba(255, 255, 255, 0.05);
+    -webkit-text-stroke: 2px #fff;
+font-family: Blackbison;
+font-size: 100px;
+font-style: normal;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-.usernum__number{
-    font-size: 150px;
-    line-height: 150px;
-    font-weight: 600;
-
-    text-align: center;
-}
-.usernum__wrap{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.usernum__title{
-
-    margin-bottom: 20px;
-    font-size: 20px;
+font-weight: 400;
+line-height: 100px;
 }
 
+@media only screen and (max-width:943px){
+    .username__number{
+        font-size: 80px;
+    }  
+    .usernumbers__title{
+        font-size: 28px;
+    }
+}
 
+@media only screen and (max-width:744px){
+    .username__number{
+        font-size: 70px;
+    }  
+    .usernumbers__title{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width:643px){
+    .usernumbers-section{
+        max-width: 451px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:450px){
+    .username__number{
+        font-size: 60px;
+        line-height: 60px;
+    }  
+    .usernumbers__title{
+        font-size: 22px;
+    }
+}
