@@ -3,7 +3,28 @@ import "./main.css"
 const Battery = () => {
     const [batteryPercentage, setBatteryPercentage] = useState(50);
 
+    const [batareyaFoizi, setBatareyaFoizi] = useState(null);
 
+    useEffect(() => {
+      const getBatareyaMalumotlari = async () => {
+        try {
+          const batareyaMalumotlari = await navigator.getBattery();
+          setBatareyaFoizi(batareyaMalumotlari.level * 100); // Batareya fozi, 0% dan 100% gacha bo'lgan son formatida
+        } catch (error) {
+          console.error("Batareya ma'lumotlarini olishda xatolik yuz berdi:", error);
+        }
+      };
+  
+      getBatareyaMalumotlari();
+  
+      // Interval orqali har bir necha soniyada batareya ma'lumotlarini yangilash uchun
+      const intervalId = setInterval(() => {
+        getBatareyaMalumotlari();
+      }, 60000); // 1 daqiqa
+  
+      // Komponent bekor qilindiğida intervalni o'chiramiz
+      return () => clearInterval(intervalId);
+    }, []);
     const batteryStyle = {
         border: '2px solid white',  
         height: '10px',
@@ -13,7 +34,7 @@ const Battery = () => {
 
       const indicatorStyle = {
         height: '100%',
-        width: `${batteryPercentage}%`,
+        width: `${batareyaFoizi}%`,
         background: 'white',
         position: 'absolute',
         top: 0,
