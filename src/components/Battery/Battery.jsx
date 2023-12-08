@@ -5,7 +5,7 @@ const Battery = () => {
 
     useEffect(() => {
       const batteryStatusHandler = (event) => {
-        const { level } = event.target;
+        const { level } = event?.target;
         setBatteryPercentage((level * 100).toFixed(2));
       };
   
@@ -23,7 +23,7 @@ const Battery = () => {
           battery?.removeEventListener('levelchange', batteryStatusHandler);
         });
       };
-    }, []); // Empty dependency array ensures that the effect runs only once on component mount
+    }, []); 
 
     const batteryStyle = {
         border: '2px solid white',  // Set the border color to white
@@ -31,8 +31,7 @@ const Battery = () => {
         width: '20px',
         position: 'relative',
       };
-    
-      // Indicator style remains the same
+
       const indicatorStyle = {
         height: '100%',
         width: `${batteryPercentage}%`,
