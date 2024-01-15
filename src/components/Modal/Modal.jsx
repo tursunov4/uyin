@@ -2,6 +2,7 @@ import React from 'react'
 import "./modal.css"
 import Comfir from "../Confirm/Conirm"
 const Modal = ({modal , setModal , hanleConfirm}) => {
+
     const closeModal =()=>{
         setModal(false)
     }
@@ -11,9 +12,10 @@ const Modal = ({modal , setModal , hanleConfirm}) => {
          setModal(false)
       }
     }
+   
   return (
     <div id='modal' onClick={(e) => handleClick(e)} className='modal'>
-       <Comfir onConfirm={hanleConfirm} modalClose={closeModal}/>
+       <Comfir  onConfirm={hanleConfirm} modalClose={closeModal}/>
     </div>
   )
 }

@@ -19,7 +19,9 @@ const Conirm = ({onSubmit ,onConfirm , modalClose}) => {
             </p>
           </div>
            <div className='modalbuttons'>
+           <a href="https://discord.gg/robies">
            <FormButton onClick={onSubmit}  buttondivclass={"buttundiv2"} img={discord} immtrue2={true}  text={"JOIN"} />  
+           </a>
           <FormButton  onClick={onConfirm} buttondivclass={"buttundiv2"}    text={"CONFIRM"} />  
            </div>
         </div>
