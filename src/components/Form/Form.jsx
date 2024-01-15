@@ -211,7 +211,7 @@ const MyForm = () => {
       </form>
       <div className="iconsdesc">
         <div className='icon-wrap'>
-         <a href="">
+         <a href="https://discord.gg/robies">
           <img src={Dicover} alt="" />
          </a>
          <a href="https://twitter.com/RobiesNFT">

@@ -13,7 +13,7 @@ const Header = () => {
                   <a className='navlinks__img' href="">
                     <img src={twiter} alt="" />
                   </a>
-                  <a className='navlinks__img' href="">
+                  <a className='navlinks__img' href="https://discord.gg/robies">
                   <img width={20} src={dicover} alt="" />
                   </a>
                   <a className='navlinks__img' href="">
