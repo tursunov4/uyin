@@ -104,9 +104,6 @@ const MyForm = () => {
       };
       const handleConfirm = ()=>{
         axios.post(process.env.REACT_APP_API +"/participant/" ,{
-          headers:{
-            "Api-Key" : "python3030"
-          },
           address_wallet: formData.username,
           discord_id: formData.id   ,
           email:formData.email  
