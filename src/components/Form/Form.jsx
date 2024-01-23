@@ -148,9 +148,9 @@ const MyForm = () => {
          <a href="https://twitter.com/RobiesNFT">
           <img src={tw} alt="" />
          </a>
-         <a href="">
+         {/* <a href="">
           <img src={Me} alt="" />
-         </a>
+         </a> */}
         </div>
 
             <Clock/>
@@ -217,9 +217,9 @@ const MyForm = () => {
          <a href="https://twitter.com/RobiesNFT">
           <img src={tw} alt="" />
          </a>
-         <a href="">
+         {/* <a href="">
           <img src={Me} alt="" />
-         </a>
+         </a> */}
       </div>
       </div>
         </div>
