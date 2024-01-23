@@ -14,8 +14,10 @@ const Number = ({n}) => {
     })
 
     useEffect(()=>{
-      axios.get(`${process.env.REACT_APP_API}/participant/count/`).then((res)=>{
-     
+      axios.get(`${process.env.REACT_APP_API}/participant/count/` , {  headers:{
+        "Api-Key":"python3030"
+      },}).then((res)=>{
+        
         setCount(res.data.get_all_count_participant)
       }).catch((err)=>{
       console.log(err)
